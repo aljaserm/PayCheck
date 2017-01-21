@@ -1,0 +1,32 @@
+PAYCHECK∙       ; ;[ 09/14/2015  8:59 PM ]←
+∙       W #←
+∙       ; THIS PROGRAM WILL DO A PAYCHECK STUB ←
+∙       ; THIS PROGRAM WAS DONE BY JAMS←
+∙       ; MOHAMMED ALJASER, SARA HOLZER, JESSE NOBERS←
+∙       R "ENTER YOUR NAME ",NAME,!←
+∙       R "HOW MANY HOURS DID YOU WORK? ",HOUR,!←
+∙       R "HOW MUCH IS YOUR HOURLY RATE? ",RATE,!←
+∙       IF HOUR>40 SET GROSS=HOUR-40*(RATE*1.5)+(40*RATE)←
+∙       IF HOUR<40 SET GROSS=HOUR*RATE←
+∙       IF GROSS<200 S FED=0←
+∙       IF GROSS>200&(GROSS<300) S FED=GROSS*0.10 ←
+∙       IF GROSS>300&(GROSS<400) S FED=GROSS*0.15←
+∙       IF GROSS>400 S FED=GROSS*0.20←
+∙       S STAX=GROSS*0.03←
+∙       S LTAX=GROSS*0.05←
+∙       S NET=GROSS-(FED+LTAX+STAX)←
+∙       W #←
+∙       W /CUP(6,1),"========================================================"←
+∙       W /CUP(8,14),"NAME: ",NAME←
+∙       W /CUP(10,14),"HOURS: ",?39,HOUR←
+∙       W /CUP(11,14),"RATE: ",?39,RATE←
+∙       W /CUP(12,14),"GROSS: ",?39,GROSS←
+∙       W /CUP(13,14),"FEDRAL TAX: ",?39,FED←
+∙       W /CUP(14,14),"STAT TAX: ",?39,STAX←
+∙       W /CUP(15,14),"LOCAL TAX: ",?39,LTAX←
+∙       W /CUP(16,14),"NET INCOME; ",?39,NET←
+∙       W /CUP(18.1),"========================================================"←
+∙       ←
+∙       ←
+∙       ←
+∙       QUIT←
